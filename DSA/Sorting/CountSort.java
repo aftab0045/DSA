@@ -27,6 +27,7 @@ public class CountSort {
             }
             System.out.println();
         }
+        // This is for Stable sorting 
         static void countSort(int[] arr){
             int n = arr.length;
             int[] output = new int[n];
