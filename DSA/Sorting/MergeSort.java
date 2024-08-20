@@ -60,7 +60,7 @@ public class MergeSort {
         merge(arr, l, mid, r );
     }
     public static void main(String[] args){
-        int[] arr = {5,3,1,4,2};
+        int[] arr = {5,3,1,4,2,9,7};
         int n = arr.length;
         System.out.println("Before Sort");
         printArray(arr);
