@@ -19,7 +19,7 @@ public class QuickSort {
         int pivot = arr[start];
         int count = 0;
 
-        for(int i=start+1;i<end;i++){
+        for(int i=start+1;i<=end;i++){
             if(arr[i]<=pivot){
                 count++;
             }
@@ -29,7 +29,7 @@ public class QuickSort {
 
         int i = start;
         int j = end;
-        while(i<pivot && pivot<j){
+        while(i<pivotIDX && pivotIDX<j){
             while (arr[i]<=pivot) {
                 i++;
             }
@@ -37,7 +37,7 @@ public class QuickSort {
                 j--;
             }
 
-            if(i<pivot && j>pivot){
+            if(i<pivotIDX && j>pivotIDX){
                 Swap(arr, i, j);
                 i++;
                 j--;
@@ -57,7 +57,7 @@ public class QuickSort {
         QuickSort(arr, pi+1, end);
     }
     public static void main(String[] args){
-        int [] arr = {5,3,7};
+        int [] arr = {5,3,7,2,9,1,4};
         int n = arr.length;
         System.out.println("Before Sort");
         PrintArray(arr);
