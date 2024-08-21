@@ -23,7 +23,7 @@ public class SortingProblem4 {
         
     }
     public static void main(String[] args){
-        int[] arr = {19,7,-4,-13,11,-5,3};
+        int[] arr = {19,7,-11,5,3};
 
         int n = arr.length;
         sortArray(arr,0,n-1);
