@@ -3,6 +3,10 @@
 public class SortingProblem3 {
 
     static void sortArray(int[] arr){
+
+        if(arr.length<=1){ // if 1 elemet in array then return arr
+            return;
+        }
         int n = arr.length;
         int x = -1, y = -1;
         for(int i =1;i<n;i++){
