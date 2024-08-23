@@ -1,3 +1,5 @@
+// Find the minimum in sorted rotated arr
+
 public class Problem3{
     static int findMinimum(int[] a){
         int n = a.length;

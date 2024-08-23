@@ -1,3 +1,5 @@
+// Find the IDX in rotated sorted arr and the IDX is targte
+
 public class Problem4 {
 
     static int searchIDX(int[] arr, int target){
