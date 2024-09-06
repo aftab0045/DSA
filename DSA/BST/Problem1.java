@@ -10,6 +10,7 @@ public class Problem1 {
             return -1;
         }
 
+        
         while(start<=end){
             int mid = (start+end)/2;
             if(arr[mid] == target){
