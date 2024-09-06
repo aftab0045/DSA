@@ -12,6 +12,7 @@ public class Multiple{
         // self work
         System.out.println(num*k);
     }
+    
     public static void main(String[] args){
         System.out.println("Enter The valur of num and k");
         Scanner sc = new Scanner(System.in);
