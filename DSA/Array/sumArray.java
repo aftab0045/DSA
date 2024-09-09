@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class sumArray {
 
+    // Sum of 2 numbers of arr is equa; to target
     static int sumOfArray(int[] arr, int target){
         int n = arr.length;
         int ans = 0;
