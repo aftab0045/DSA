@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class ArrayManipulation {
 
     // Find out the unique num from the given arr , arr contains only 1 uniqw NUM
-    static int ArrManupulation(int[] arr,int target){
+    static int ArrManupulation(int[] arr){
         int n = arr.length;
         int ans =0;
 
@@ -34,6 +34,6 @@ public class ArrayManipulation {
             arr[i] = sc.nextInt();
         }
 
-        System.out.println(ArrManupulation(arr,target));
+        System.out.println(ArrManupulation(arr));
     }
 }
