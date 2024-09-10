@@ -33,7 +33,7 @@ public class sortBinary2 {
                 }
 
                 if(arr[right] == 1){
-                    right++;
+                    right--;
                 }
             }
         }
