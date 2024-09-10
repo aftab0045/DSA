@@ -8,6 +8,7 @@ public class prefixSufix {
         System.out.println();
     }
 
+    // Calcualte Prifix sum
     static int [] prefixSum(int [] arr){
         int n = arr.length;
         int pref[] = new int[n];
@@ -19,6 +20,7 @@ public class prefixSufix {
 
     }
 
+    // Calcilate suffix sum
     static int [] suffixSum(int [] arr){
         int n = arr.length;
         int suff[] = new int[n];
@@ -29,19 +31,34 @@ public class prefixSufix {
         return suff;
     }
 
-    static int checkSum(){
-        int pref[] = prefixSum(arr);
-        int suff[] = suffixSum(arr);
-        int i = 0;
-        while(i<arr.length){
-            if(pref[i] == suff[i+1]){
-                System.out.println(true);
-            }
-            else{
-                System.out.println(false);
-            }
+    // Total um
+    static int totalSum(int[] arr){
+        int totalSum = 0;
+
+        for(int i=0;i<arr.length;i++){
+            totalSum += arr[i];
         }
+
+        return totalSum;
     }
+
+    // check The equal partition
+    static boolean checkPartition(int[] arr){
+        int n = arr.length;
+        int pref = 0;
+        int totalSum = totalSum(arr);
+        for(int i=0;i<n;i++){
+            pref += arr[i];
+            int suff = totalSum - pref;
+
+            if(pref == suff)
+                return true;
+            
+        }
+
+        return false;
+    }
+    
     public static void main (String[] args){
         System.out.println("Enter the size of array ");
         Scanner sc = new Scanner(System.in);
@@ -52,10 +69,9 @@ public class prefixSufix {
             arr[i] = sc.nextInt();
         }
         
-        int pref[] = prefixSum(arr);
-        int suff[] = suffixSum(arr);
+
+        System.out.println(checkPartition(arr));
         
-        checkSum(arr);
         
     }
 }
