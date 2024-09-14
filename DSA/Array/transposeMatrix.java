@@ -10,16 +10,26 @@ public class transposeMatrix {
         }
     }
 
-    static int[][] Transpose(int[][] matrix,int r,int c){
-        int[][] ans = new int[c][r];
+    // static int[][] Transpose(int[][] matrix,int r,int c){
+    //     int[][] ans = new int[c][r];
 
-        for(int i=0;i<c;i++){
-            for(int j=0;j<r;j++){
-                ans[i][j] = matrix[j][i];
+    //     for(int i=0;i<c;i++){
+    //         for(int j=0;j<r;j++){
+    //             ans[i][j] = matrix[j][i];
+    //         }
+    //     }
+
+    //     return ans;
+    // }
+
+    static void transposeINplace(int[][] matrix,int r,int c){
+        for(int i =0;i<c;i++){
+            for(int j=i;j<r;j++){
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
             }
         }
-
-        return ans;
     }
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
@@ -38,8 +48,12 @@ public class transposeMatrix {
         System.out.println("Orignal Matrix Is : ");
         print(matrix);
 
-        System.out.println("Transpose Of Matrix Is : ");
-        int[][] ans = Transpose(matrix,r,c);
-        print(ans);
+        // System.out.println("Transpose Of Matrix Is : ");
+        // int[][] ans = Transpose(matrix,r,c);
+        // print(ans);
+
+        System.out.println("After Transpose Of Matrix : ");
+        transposeINplace(matrix, r, c);
+        print(matrix);
     }
 }
