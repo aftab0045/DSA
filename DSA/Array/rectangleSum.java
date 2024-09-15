@@ -14,6 +14,38 @@ public class rectangleSum {
         return sum;
     }
 
+
+    // 2nd Approach 
+    // Calculate prefix sum matrix
+
+    static void prefixSum(int[][] matrix){
+        int r = matrix.length;
+        int c = matrix[0].length;
+
+        for(int i = 0; i < r; i++){
+            for(int j = 1; j < c; j++){
+                matrix[i][j] += matrix[i][j-1];
+            }
+        }
+    }
+
+    static int sumOfRectangle2(int[][] matrix, int l1, int r1, int l2, int r2){
+        int sum = 0;
+        prefixSum(matrix);
+
+        for(int i = l1; i <= l2; i++){
+
+            if( r1 >= 1){
+                sum += matrix[i][r2] - matrix[i][r1-1];
+            }
+            else{
+                sum += matrix[i][r2] ;
+            }
+            
+        }
+        return sum;
+    }
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter The Value Of Row and Column :");
@@ -35,5 +67,8 @@ public class rectangleSum {
 
         System.out.println("Sum Of Rectangle is : ");
         System.out.println(sumOfRectangle(matrix, l1, r1, l2, r2));
+
+        System.out.println("Sum Of Rectangle is : ");
+        System.out.println(sumOfRectangle2(matrix, l1, r1, l2, r2));
     }
 }
