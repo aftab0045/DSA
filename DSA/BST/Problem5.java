@@ -37,8 +37,8 @@ public class Problem5 {
         return -1;
     }
     public static void main(String[] args) {
-        int[] arr = {1,1,1,2,2,2,3,1,1};
-        int target = 3;
+        int[] arr = {1,1,1,1,1,1,2,3,1,1};
+        int target = 2;
 
         System.out.println(findIDX( arr, target ));
     }
