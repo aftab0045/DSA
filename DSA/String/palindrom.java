@@ -1,0 +1,18 @@
+import java.util.*;
+public class palindrom{
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter Name :");
+        String name = sc.nextLine();
+        // 1st Approach
+        StringBuilder rev = new StringBuilder(name);
+        String revName = rev.reverse().toString();
+
+        if(name.equals(revName)){
+            System.out.println("Palindrom");
+        }
+        else{
+            System.out.println("Not Palindrom");
+        }
+    }
+}
