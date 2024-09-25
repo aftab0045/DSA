@@ -58,12 +58,27 @@ public class ClassLL {
         }
         // Delete Node At IDX
         void delete(int IDX){
+            if(IDX == 0) {
+                head = head.next;
+            }
             Node temp = head;
             for(int i = 1; i<= IDX-1; i++){
                 temp = temp.next;
             }
             temp.next = temp.next.next;
+            if(IDX == size()){
+                tail = temp;
+            }
         } 
+        // Add At Last Of Linked List Where We Only Know The Head Dont Know The Tail
+        void add(Node head, int val){
+            Node temp = new Node(val);
+            Node t = head;
+            while (t.next != null) {
+                t = t.next;
+            }
+            t.next = temp;
+        }
         // size of linked list
         int size(){
             Node temp = head;
@@ -99,10 +114,11 @@ public class ClassLL {
         ll.addAtFirst(5);
         ll.display();
         System.out.println();
-        ll.delete(4);
+        ll.delete(6);
         ll.display();
         System.out.println();
         // System.out.println("Data At IDX : "+ll.getAt(4));
         System.out.println("Size : "+ll.size());
+        System.out.println(ll.tail.data);
     }    
 }
