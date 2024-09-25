@@ -1,5 +1,5 @@
 
-public class display {
+public class displayLL {
 
     static void display(Node head){
         Node temp = head;
