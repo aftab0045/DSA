@@ -55,6 +55,14 @@ public class ClassLL {
                 temp = temp.next;
             }
             return temp.data;
+        }
+        // Delete Node At IDX
+        void delete(int IDX){
+            Node temp = head;
+            for(int i = 1; i<= IDX-1; i++){
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
         } 
         // size of linked list
         int size(){
@@ -87,9 +95,14 @@ public class ClassLL {
         // ll.display();
         // System.out.println();
         ll.addAtIDX(3, 5);
+        ll.addAtlast(7);
+        ll.addAtFirst(5);
         ll.display();
         System.out.println();
-        System.out.println("Data At IDX : "+ll.getAt(4));
+        ll.delete(4);
+        ll.display();
+        System.out.println();
+        // System.out.println("Data At IDX : "+ll.getAt(4));
         System.out.println("Size : "+ll.size());
     }    
 }
