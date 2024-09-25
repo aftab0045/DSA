@@ -38,7 +38,16 @@ public class ClassLL {
                 head = temp;
             }
         }
-        
+        // Add Node at IDX in between head and tail
+        void addAtIDX(int IDX, int val){
+            Node temp = new Node(val);
+            Node t = head;
+            for(int i = 1; i <= IDX-1; i++){
+                t = t.next;
+            }
+            temp.next = t.next;
+            t.next = temp;
+        }
         // size of linked list
         int size(){
             Node temp = head;
@@ -64,9 +73,12 @@ public class ClassLL {
         ll.addAtlast(1);
         ll.addAtlast(2);
         ll.addAtlast(3);
-        ll.display();
-        System.out.println();
+        // ll.display();
+        // System.out.println();
         ll.addAtFirst(0);
+        // ll.display();
+        // System.out.println();
+        ll.addAtIDX(3, 5);
         ll.display();
         System.out.println();
         System.out.println("Size : "+ll.size());
