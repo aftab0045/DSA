@@ -48,6 +48,14 @@ public class ClassLL {
             temp.next = t.next;
             t.next = temp;
         }
+        // Return Data at IDX
+        int getAt(int IDX){
+            Node temp = head;
+            for(int i = 1; i <= IDX; i++){
+                temp = temp.next;
+            }
+            return temp.data;
+        } 
         // size of linked list
         int size(){
             Node temp = head;
@@ -81,6 +89,7 @@ public class ClassLL {
         ll.addAtIDX(3, 5);
         ll.display();
         System.out.println();
+        System.out.println("Data At IDX : "+ll.getAt(4));
         System.out.println("Size : "+ll.size());
     }    
 }
