@@ -9,6 +9,7 @@ public class problem11 {
         }
     }
 
+    // Brute Force Approach
     public static Node reverseLinkedList(Node head){
         if(head.next == null){
             return head;
@@ -18,6 +19,22 @@ public class problem11 {
         head.next = null;
 
         return newHead;
+    }
+
+    // Optimal Solution
+    static Node reverseLinkedList2(Node head){
+        Node prev = null;
+        Node curr = head;
+        Node Next = null;
+
+        while(curr != null){
+            Next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = Next;
+        }
+
+        return prev;
     }
 
     static void display(Node head){
@@ -46,11 +63,16 @@ public class problem11 {
         d.next = e;
         e.next = f;
 
+        System.out.println("Orignal List");
         display(a);
 
-        Node ans = reverseLinkedList(a);
+        // System.out.println("Reverse By Recursion");
+        // Node ans = reverseLinkedList(a);
+        // display(ans);
 
-        display(ans);
+        System.out.println("Reverse By 3 pointer");
+        Node ans2 = reverseLinkedList2(a);
+        display(ans2);
 
     }
 
