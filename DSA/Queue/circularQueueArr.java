@@ -87,10 +87,16 @@ public class circularQueueArr {
         q.add(1);
         q.add(2);
         q.add(3);
+        q.add(4);
         q.display();
 
         q.remove();
-        q.remove();
+        q.display();
+        q.add(5);
+        q.display();
+        q.add(6);
+        q.display();
+        q.add(9);
         q.display();
     }
 }
