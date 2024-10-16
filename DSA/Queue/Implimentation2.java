@@ -72,7 +72,9 @@ public class Implimentation2 {
             else{
                 return false;
             }
+
         }
+        
     }
     public static void main(String[] args) {
         queueLinkedList q = new queueLinkedList();
