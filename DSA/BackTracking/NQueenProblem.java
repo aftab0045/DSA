@@ -20,7 +20,7 @@ public class NQueenProblem {
             if(isSafe(board, row, j)){
                     board[row][j] = 'Q';
                     NQueen(board, row+1);
-                    board[row][j] = 'X';
+                    board[row][j] = '.';
                 }
             }
         
@@ -98,7 +98,7 @@ public class NQueenProblem {
 
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
-                board[i][j] = 'X';
+                board[i][j] = '.';
             }
         }
 
