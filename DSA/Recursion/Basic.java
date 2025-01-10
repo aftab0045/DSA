@@ -32,7 +32,7 @@ public class Basic {
 
         for(int i = 0; i < n; i++){
             int ans = fibonacci(i);
-            System.out.println(ans);
+            System.out.print(ans+" ");
         }
     }
 }
