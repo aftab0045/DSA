@@ -18,6 +18,7 @@ public class problem12 {
             Next = curr.next;
             curr.next = prev;
             prev = curr;
+            
             curr = Next;
         }
 

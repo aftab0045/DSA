@@ -7,6 +7,7 @@ public class problem4 {
       Node next;
       Node(int x) {
           val = x;
+          
       }
   }
  

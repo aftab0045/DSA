@@ -12,6 +12,7 @@ public class CountSort {
             int max = findMax(arr); // Find the largest element of the arr
             int[] count = new int[max+1];
             for(int i = 0; i < arr.length; i++){
+                
                 count[arr[i]]++;
             }
             int k = 0;

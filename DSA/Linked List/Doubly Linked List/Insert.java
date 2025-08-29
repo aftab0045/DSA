@@ -8,6 +8,7 @@ public class Insert {
             this.data = data;
         }
     }
+    
 
     // Insert At Head Of Doubly Linkes List
     static Node inserAtHead(Node head, int val){

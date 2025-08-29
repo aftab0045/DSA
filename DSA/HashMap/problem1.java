@@ -6,6 +6,7 @@ public class problem1 {
         HashMap<Integer, Integer> freq = new HashMap<>();
 
         for(int e : arr){
+            
             if(!freq.containsKey(e)){
                 freq.put(e, 1);
             }
