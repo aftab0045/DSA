@@ -16,6 +16,8 @@ public class palindrom{
         //     System.out.println("Not Palindrom");
         // }
 
+        
+
         // 2nd Approach
         int i = 0;
         int j = name.length()-1;
